@@ -1,3 +1,5 @@
 # Webdelbrot
 
-Web-based mandelbrot viewer based on Godelbrot
+Static data files for a web-based mandelbrot viewer based on Godelbrot
+
+http://github.com/johnny-morrice/godelbrot
