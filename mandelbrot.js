@@ -4,8 +4,8 @@ function Mandelbrot(fractalDimensions, docDimensions) {
     this.realMax = fractalDimensions.realMax;
     this.imagMin = fractalDimensions.imagMin;
     this.imagMax = fractalDimensions.imagMax;
-    this.imageWidth = docDimensions.imageWidth;
-    this.imageHeight = docDimensions.imageHeight;
+    this.imageWidth = Math.round(docDimensions.imageWidth);
+    this.imageHeight = Math.round(docDimensions.imageHeight);
 }
 
 // Render the Mandelbrot set
@@ -42,7 +42,7 @@ Mandelbrot.prototype.resize = function() {
 Mandelbrot.prototype.planeUnits = function() {
     var width = this.realMax - this.realMin;
     var height = this.imagMax - this.imagMin;
-    var elemDim = imageDimensions(); 
+    var elemDim = imageDimensions();
     var units = {};
     units.real = width / elemDim.imageWidth;
     units.imag = height / elemDim.imageHeight;
